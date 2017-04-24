@@ -21,6 +21,9 @@
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "react-tap-event-plugin": "^2.0.1",
+    "react-three": "^0.9.7",
+    "react-three-renderer": "^3.1.0",
+    "three": "^0.85.0",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
