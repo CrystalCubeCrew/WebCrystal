@@ -16,4 +16,16 @@
   padding-top: 100px;
   box-sizing: border-box;
   background: linear-gradient(45deg, #742103, #000 40%, #000 60%, #4072C4);
+
+  @media screen and (max-width: 768px) {
+    padding-top: 201px;
+  }
+
+  .page {
+    z-index: 1;
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(transparent, #123);
+    color: white;
+  }
 }

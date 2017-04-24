@@ -1,0 +1,27 @@
+.features {
+  text-align: center;
+  background: linear-gradient(transparent, #123, transparent);
+  padding: 16px 0;
+}
+
+.fts {
+  display: flex;
+  flex-wrap: wrap;
+
+  .ft {
+    flex: 1;
+    text-align: center;
+    margin: 0 8px;
+    padding: 16px 0;
+
+    img { max-width: 100%; }
+    
+    @media screen and (max-width: 480px) {
+      min-width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+
+

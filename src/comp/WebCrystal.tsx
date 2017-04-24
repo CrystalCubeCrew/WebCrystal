@@ -9,7 +9,7 @@ import {
 
 // Assets Import
 import './WebCrystal.scss'
-const logo = require('../assets/logo.png')
+const logo = require('../assets/crystalcube.md.png')
 
 // Component Import
 import { Nav } from './Nav/Nav'
@@ -28,22 +28,42 @@ interface WebCrystalState {
   time:Date
   content:any
   items:any
+  path:string
 }
 
 export class WebCrystal extends React.Component<WebCrystalProps, WebCrystalState> {
   componentWillMount() {
+    var hashResolver
+    switch (window.location.hash) {
+      case '#/home' :
+        hashResolver = <Home />
+        break;
+      case '#/about' :
+        hashResolver = <About />
+        break;
+      case '#/login' :
+        hashResolver = <FirebaseLogin />
+        break;
+      case '#/app' :
+        hashResolver = <Crystal />
+        break;
+      default :
+        hashResolver = <Home />
+        break;
+    }
+
     this.setState({
-      content: <Home />,
+      content: hashResolver,
       items : [
         {
           key: 1,
           content: <div>Features</div>,
-          onClick: () => this.setContent(<Home />)
+          onClick: () => this.setContent(<Home />, '#/home')
         },
         {
           key: 2,
           content: <div>About</div>,
-          onClick: () => this.setContent(<About />)
+          onClick: () => this.setContent(<About />, '#/about')
         },
         {
           key: 3,
@@ -52,7 +72,7 @@ export class WebCrystal extends React.Component<WebCrystalProps, WebCrystalState
             color: "white"
           },
           content: <div>Login</div>,
-          onClick: () => this.setContent(<FirebaseLogin />)
+          onClick: () => this.setContent(<FirebaseLogin />, '#/login')
         }
       ]
     })
@@ -72,9 +92,17 @@ export class WebCrystal extends React.Component<WebCrystalProps, WebCrystalState
     )
   }
 
-  setContent(value: any) {
+  setContent(value: any, path:string) {
+    this.setPath(path)
     this.setState({
       content: value
     })
+  }
+
+  setPath(path:string) {
+    this.setState({
+      path: path
+    })
+    console.log(this.state.path)
   }
 }

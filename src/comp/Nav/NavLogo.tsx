@@ -8,7 +8,7 @@ export class NavLogo extends React.Component<NavLogoProps, undefined> {
   render() {
     return (
       <div className="nav-logo-ctn drop-shadow">
-        <img src={this.props.logo} alt="WebCrystal Logo" className="nav-logo"/>
+        <img src={this.props.logo} alt="CrystalCube Logo" className="nav-logo"/>
       </div>
     )
   }

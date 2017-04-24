@@ -16,7 +16,9 @@ export class Content extends React.Component<ContentProps, undefined> {
     return (
       <div className="content">
         <div className="bokeh-underlay"/>
-        {this.props.page}
+        <div className="page">
+          {this.props.page}
+        </div>
         <Voice onClick={() => alert('Coming Soon!')} />
       </div>
     )
