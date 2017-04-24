@@ -1,0 +1,14 @@
+.home {
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(transparent, #123);
+    color: white;
+
+  .home-title {
+    font-size: 3em;
+  }
+
+  .home-subtitle {
+    color: #ccc;
+  }
+}

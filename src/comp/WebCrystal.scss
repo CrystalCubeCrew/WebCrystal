@@ -1,0 +1,21 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  font-family: 'Lato', sans-serif;
+  color: #333;
+}
+
+.container {
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.drop-shadow {
+  filter: drop-shadow(0 5px 5px rgba(0,0,0,.5))
+}

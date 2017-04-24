@@ -1,0 +1,76 @@
+/* Navigation Bar Styles*/
+.nav {
+  z-index: 1000;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background: -webkit-linear-gradient(rgba(0,0,0,.3), transparent);
+  background: linear-gradient(rgba(0,0,0,.3), transparent);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
+  
+  /* Nav Logo Container*/
+  .nav-logo-ctn {
+
+    img.nav-logo {
+      height: 48px;
+    }
+  }
+
+  /* Nav Items Container*/
+  .nav-items-ctn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+  
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+    }
+
+    .nav-item {
+      border-radius: 24px;
+      margin: 0 8px;
+      background-color: white;
+      padding: 8px 32px;
+      color: #333;
+      font-weight: 500;
+      -webkit-transition: .1s;
+      transition: .1s;
+      
+  
+      @media screen and (max-width: 768px) {
+        flex: 1;
+        margin: 8px;
+        text-align: center;
+      }
+
+      &:hover, &:focus {
+        outline: none;
+        cursor: pointer;
+        text-decoration: underline;
+        background: -webkit-linear-gradient(45deg, #3366ff, #1ee4a6);
+        background: linear-gradient(45deg, #3366ff, #1ee4a6);
+        -webkit-filter: drop-shadow(0 5px 8px rgba(51,102,255,.5));
+                filter: drop-shadow(0 5px 8px rgba(51,102,255,.5));
+        color: white;
+        box-shadow: 0px -1px 0px 1px #fff inset;
+      }
+
+      &:active {
+        -webkit-filter: brightness(120%);
+                filter: brightness(120%);
+      }
+    }
+  }
+}

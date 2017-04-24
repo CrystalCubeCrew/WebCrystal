@@ -1,0 +1,28 @@
+.voice-button {
+  z-index: 1000;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  border-radius: 50%;
+  background-color: #3366ff;
+  color: white;
+  font-weight: 600;
+  padding: 14px 14px 12px 14px;
+  box-shadow: 0 3px 15px -3px black;
+  transition: .2s;
+
+  img {
+    filter: invert(100%);
+  }
+
+  &:hover, &:focus {
+    filter: brightness(120%);
+    box-shadow: 0 3px 15px -3px #3366ff;
+    cursor: pointer;
+  }
+
+  &:active {
+    filter: brightness(150%);
+    box-shadow: 0 1px 15px -3px white;
+  }
+}
